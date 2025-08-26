@@ -2,5 +2,5 @@
   "$schema": "https://raw.githubusercontent.com/microsoft/AL-Go/mazhelez/custom-template-fixes/Actions/settings.schema.json",
   "type": "PTE",
   "templateUrl": "https://github.com/microsoft/AL-Go@mazhelez/custom-template-fixes",
-  "templateSha": "2bd379c1f7326070dac5a270b852e09e543b4e79"
+  "templateSha": "91470d8556683c6777295a6d33701e54c4381177"
 }
