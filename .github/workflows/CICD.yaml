@@ -354,6 +354,14 @@ jobs:
           deliveryTarget: ${{ matrix.deliveryTarget }}
           artifacts: '.artifacts'
 
+  CustomJob-Job:
+    runs-on: [ ubuntu-latest ]
+    needs: [ Initialization ]
+    steps:
+      - name: test
+        run: |
+          Write-Host "Custom template job"
+
   PostProcess:
     needs: [ Initialization, Build, Deploy, Deliver, DeployALDoc ]
     if: (!cancelled())
