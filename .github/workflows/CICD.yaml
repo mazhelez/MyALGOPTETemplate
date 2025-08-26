@@ -381,3 +381,11 @@ jobs:
           shell: powershell
           telemetryScopeJson: ${{ needs.Initialization.outputs.telemetryScopeJson }}
           currentJobContext: ${{ toJson(job) }}
+          
+  CustomJob-MyTemplateJob:
+    needs: [ Initialization ]
+    if: (!cancelled())
+    runs-on: [ windows-latest ]
+    steps:
+      - run: |
+          Write-Host "My template job"
