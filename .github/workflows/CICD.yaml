@@ -372,15 +372,6 @@ jobs:
           telemetryScopeJson: ${{ needs.Initialization.outputs.telemetryScopeJson }}
           currentJobContext: ${{ toJson(job) }}
 
-  CustomJob-Test:
-    needs: [ Initialization ]
-    if: (!cancelled())
-    runs-on: [ windows-latest ]
-    steps:
-      - name: Test
-        run: |
-          Write-Host "Test custom job"
-
   CustomJob-Test2:
     needs: [ Initialization ]
     if: (!cancelled())
